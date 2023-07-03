@@ -1,5 +1,4 @@
-#CHIT-CHAT - Chat Application 
-CHIT-CHAT is chat application build with the power of MERN Stack.
+#CHIT-CHAT is chat application build with the power of MERN Stack.
 
 ## Installation Guide
 
@@ -10,7 +9,7 @@ CHIT-CHAT is chat application build with the power of MERN Stack.
 Both should be installed and make sure mongodb is running.
 
 ```shell
-git clone https://github.com/koolkishan/chat-app-react-nodejs
+git clone https://github.com/Arpit-puri/CHIT-CHAT
 cd chat-app-react-nodejs
 ```
 Now rename env files from .env.example to .env
@@ -26,24 +25,22 @@ cd ..
 Now install the dependencies
 ```shell
 cd server
-yarn
+npm i
 cd ..
 cd public
-yarn
+npm i
 ```
 We are almost done, Now just start the development server.
 
 For Frontend.
 ```shell
 cd public
-yarn start
+npm start
 ```
 For Backend.
 
 Open another terminal in folder, Also make sure mongodb is running in background.
 ```shell
 cd server
-yarn start
+npm start
 ```
-
-Done! Now open localhost:3000 in your browser.
