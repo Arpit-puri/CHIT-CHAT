@@ -11,23 +11,18 @@ app.use(cors());
 app.use(express.json());
 
 mongoose
-  .connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect("mongodb://localhost:27017/chat")
   .then(() => {
     console.log("DB Connetion Successfull");
   })
   .catch((err) => {
-    console.log(err.message);
+    console.log("error" + err.message);
   });
 
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 
-const server = app.listen(process.env.PORT, () =>
-  console.log(`Server started on ${process.env.PORT}`)
-);
+const server = app.listen(5000, () => console.log(`Server started on ${5000}`));
 const io = socket(server, {
   cors: {
     origin: "http://localhost:3000",
